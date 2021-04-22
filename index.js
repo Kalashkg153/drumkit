@@ -7,10 +7,12 @@ document.querySelectorAll("button")[i].addEventListener("click", clicksound);
 function clicksound()
 {
     handle(this.innerHTML);
+    buttonAnimation(this.innerHTML);
 }
 function keysound(event)
 {
     handle(event.key);
+    buttonAnimation(event.key);
 }
 
 
@@ -30,21 +32,38 @@ function handle(key)
             var audio=new Audio("sounds/snare.mp3");
             audio.play();
             break;
-        case "a":
+        case "s":
             var audio=new Audio("sounds/tom-1.mp3");
             audio.play();
             break;
-        case "s":
+        case "h":
             var audio=new Audio("sounds/tom-2.mp3");
             audio.play();
             break;
-        case "h":
+        case "g":
             var audio=new Audio("sounds/tom-3.mp3");
             audio.play();
             break;
-        case "g":
+        case "p":
             var audio=new Audio("sounds/tom-4.mp3");
             audio.play();
             break;
     }
+}
+
+function buttonAnimation(selected)
+{
+    var active = document.querySelector("."+ selected);
+    active.classList.add("pressed");
+    active.classList.add("pressed2");
+    setTimeout(function()
+    {
+        active.classList.remove("pressed");
+       
+    }, 200);
+    setTimeout(function()
+    {
+        active.classList.remove("pressed2");
+       
+    }, 1000);
 }

@@ -28,19 +28,19 @@ footer {
   background: url("images/tom1.png");
 }
 
-.a {
+.s {
   background: url("images/tom2.png");
 }
 
-.s {
+.h {
   background: url("images/tom3.png");
 }
 
-.h {
+.g {
   background: url("images/tom4.png");
 }
 
-.g {
+.p {
   background: url("images/crash.png");
 }
 
@@ -54,10 +54,16 @@ footer {
 }
 
 .pressed {
+  color: rgb(53, 236, 236);
+  transform: scale(0.8);
   box-shadow: 0 3px 4px 0 #DBEDF3;
   opacity: 0.5;
+  
 }
-
+.pressed2{
+  
+  background: url("images/snare.png");
+}
 .red {
   color: red;
 }
@@ -78,4 +84,8 @@ footer {
   text-align: center;
   margin: 10px;
   background-color: white;
+  transition: all 1s;
+}
+.drum:hover{
+  color: aqua;
 }
